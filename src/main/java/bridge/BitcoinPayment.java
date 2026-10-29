@@ -7,6 +7,6 @@ public class BitcoinPayment extends PaymentNotification {
 
     @Override
     public void notifyPayment() {
-
+        channel.send("Bitcoin payment confirmed!");
     }
 }
