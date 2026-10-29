@@ -25,6 +25,8 @@ public class BridgeDriverTest {
             assertTrue(result.contains("SMS: Please pay when your order arrives."));
             assertTrue(result.contains("Email: Bitcoin payment confirmed!"));
             assertTrue(result.contains("SMS: Bitcoin payment confirmed!"));
+            assertTrue(result.contains("Push: Online payment successful!"));
+            assertTrue(result.contains("Push: Please pay when your order arrives."));
 
         } finally {
             System.setOut(originalOut);

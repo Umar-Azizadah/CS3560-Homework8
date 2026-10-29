@@ -28,5 +28,14 @@ public class BridgeDriver {
         // Scenario 6: Bitcoin Payment with SMS
         PaymentNotification smsBitcoin = new BitcoinPayment(sms);
         smsBitcoin.notifyPayment();
+
+        // Scenario 7: Online Payment with Push
+        NotificationChannel push = new PushChannel();
+        PaymentNotification onlinePush = new OnlinePaymentNotification(push);
+        onlinePush.notifyPayment();
+
+        // Scenario 8: Cash Payment with Push
+        PaymentNotification cashPush = new CashOnDeliveryPayment(push);
+        cashPush.notifyPayment();
     }
 }
