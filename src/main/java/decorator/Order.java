@@ -16,6 +16,6 @@ public class Order {
     }
 
     public double getTotalCost() {
-
+        return 0;
     }
 }
