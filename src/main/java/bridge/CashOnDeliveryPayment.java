@@ -7,6 +7,6 @@ public class CashOnDeliveryPayment extends PaymentNotification{
 
     @Override
     public void notifyPayment() {
-
+        channel.send("Please pay when your order arrives.");
     }
 }
