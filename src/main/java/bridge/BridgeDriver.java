@@ -17,8 +17,16 @@ public class BridgeDriver {
         PaymentNotification cashEmail = new CashOnDeliveryPayment(email);
         cashEmail.notifyPayment();
 
-        // Scenario 4: SMS Payment with Email
+        // Scenario 4: Cash Payment with SMS
         PaymentNotification cashSms = new CashOnDeliveryPayment(sms);
         cashSms.notifyPayment();
+
+        // Scenario 5: Bitcoin Payment with Email
+        PaymentNotification emailBitcoin = new BitcoinPayment(email);
+        emailBitcoin.notifyPayment();
+
+        // Scenario 6: Bitcoin Payment with SMS
+        PaymentNotification smsBitcoin = new BitcoinPayment(sms);
+        smsBitcoin.notifyPayment();
     }
 }
