@@ -8,14 +8,20 @@ public class Order {
     private List<FoodItem> items;
 
     public Order() {
-
+        items = new ArrayList<>();
     }
 
     public void addItem(FoodItem item) {
-
+        items.add(item);
     }
 
     public double getTotalCost() {
-        return 0;
+        double total = 0;
+
+        for (FoodItem item : items) {
+            total += item.getCost();
+        }
+
+        return total;
     }
 }
